@@ -49,12 +49,15 @@ public class CommandLs extends AbstractCommand {
 	}
 	
 	public String convertSize(long size) {  // size 변환
-		String convertedSize = ""+size;
-		if(size>=1000) {
-			convertedSize = size/1000+"K";
-		}else if(size >=1000000) {
+		String convertedSize = ""+size;		
+		if(size>= 1024 * 1024 * 1024) {
+			convertedSize = size/1000000000+"G";
+		}else if(size >= 1024 * 1024) {
 			convertedSize = size/1000000+"M";
+		}else if(size>=1024) {
+			convertedSize = size/1000+"K";
 		}
+		
 		return convertedSize;
 	}
 }
