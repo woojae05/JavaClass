@@ -31,7 +31,7 @@ public class Divider { // 모든 클래스는 Object 클래스를 상속받는�
 			saveResult(value1,value2,result);
 			
 		} catch(InputMismatchException e) { // 모든 예외클래스는 Exceptions을 상속받는다.
-											//RuntimeExceptio(unchecked)을 상속받은 exceptoons은 따로 예외처리를 하지 않아도 실행된다.
+											//RuntimeException(unchecked)을 상속받은 exceptoons은 따로 예외처리를 하지 않아도 실행된다.
 			System.out.println("문자가 아닌 숫자를 입력하시오");
 		}catch(ArithmeticException e) { // 자식클래스를 상단에 위치해야 오류가 나지 않는다.
 			System.out.println("0으로 나눌 수 없다");
